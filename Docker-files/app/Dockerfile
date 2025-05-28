@@ -4,7 +4,7 @@ WORKDIR /src/
 
 RUN apt update && apt install -y git
 
-RUN git clone -b docker https://github.com/Vineeth-Parvatam/vprofile-project.git
+RUN git clone -b vpro-docker https://github.com/Vineeth-Parvatam/vprofile-project.git
 RUN cd vprofile-project && mvn clean install
 
 
