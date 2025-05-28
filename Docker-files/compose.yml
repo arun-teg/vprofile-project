@@ -19,9 +19,10 @@ services:
       container_name: vprocache01
 
    vpromq01:
-      image: rabbitmq:3.13.7-management-alpine
+      image: rabbitmq
       ports:
          - "5672:5672"
+         - "15672:15672"
       container_name: vpromq01
       environment:
         - RABBITMQ_DEFAULT_USER=guest
