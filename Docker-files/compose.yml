@@ -12,11 +12,11 @@ services:
       volumes:
          - vprodbvol:/var/lib/mysql
    
-   vprocached01:
+   vprocache01:
       image: memcached
       ports:
          - "11211:11211"
-      container_name: vprocached01
+      container_name: vprocache01
 
    vpromq01:
       image: rabbitmq:3.13.7-management-alpine
