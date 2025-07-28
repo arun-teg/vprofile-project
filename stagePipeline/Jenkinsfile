@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'MAVEN3.9'
-        jdk 'JDK17'
+        maven 'Maven3.9'   // Use the actual name from Global Tool Config
+        jdk 'jdk17'        // Match the configured JDK tool name
     }
 
     environment {
@@ -97,7 +97,7 @@ pipeline {
         stage('Build App Image') {
             steps {
                 script {
-                    dockerImage = docker.build(appRegistry + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
+                    dockerImage = docker.build("${appRegistry}:${BUILD_NUMBER}", "./Docker-files/app/multistage/")
                 }
             }
         }
