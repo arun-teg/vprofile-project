@@ -4,10 +4,10 @@ def COLOR_MAP = [
 ]
 pipeline {
     agent any
-    tools {
-        maven "MAVEN3.9"
-        jdk "JDK17"
-    }
+#    tools {
+#        maven "MAVEN3.9"
+#        jdk "JDK17"
+#    }
     
     environment {
         SNAP_REPO = 'vprofile-snapshot'
